@@ -1,0 +1,11 @@
+{
+    "name": "shahriaraminjoy/auth-sdk-library",
+    "description": "Authentication SDK Library for PHP",
+    "autoload": {
+        "psr-4": {
+            "AuthSdkLibrary\\": "AuthSDKLibrary/src"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
