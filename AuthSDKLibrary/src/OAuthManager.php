@@ -37,7 +37,7 @@ class OAuthManager
     }
 
     /**
-     * Handle the OAuth provider's callback and exchange the code for an access token.
+     * Handle the OAuth provider's callback
      *
      * @param string $provider The OAuth provider (e.g., 'google', 'github').
      * @param array $data {
