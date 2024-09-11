@@ -42,7 +42,7 @@ For more detailed information, visit the [AuthSDK Library Documentation](https:/
 
 ## HLD AuthSDKLibrary
 
-For a detailed overview of the system architecture and component interactions, refer to the [HLD of AuthSDK Library](https://docs.google.com/document/d/1tMGVHM6AXhxd45zYP0sTRB0ibuyl6apPOvdRlW9knGA/edit).
+For a detailed overview of the system architecture and component interactions, refer to the [HLD of AuthSDK Library](https://drive.google.com/file/d/16EH5CHUkcExh-qzN9RNfP_EkbQ2G_KQE/view?usp=sharing)
 
 ## Technologies Used
 
