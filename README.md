@@ -144,7 +144,13 @@ Add your OAuth providers' credentials in the `config/services.php` file of your 
 
 ## Configuration
 
-### 1. Environment Variables
+### 1. Configure Environment Variables
+
+Create a new `.env` file from the example provided:
+
+`cp .env.example .env`
+
+Edit the `.env` file to include your specific configuration settings such as database credentials and API keys.
 
 Set the necessary environment variables in your `.env` file for each OAuth provider:
 
