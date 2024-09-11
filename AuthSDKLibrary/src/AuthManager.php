@@ -68,7 +68,7 @@ class AuthManager
      * Assign a role to a user.
      *
      * @param array $data {
-     *     @type string $role_name The name of a role.
+     *     @type string $name The name of a role.
      * }
      * @return \Illuminate\Http\JsonResponse
      */
