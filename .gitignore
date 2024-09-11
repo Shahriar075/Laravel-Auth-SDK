@@ -21,3 +21,4 @@ storage
 /.idea
 /.vscode
 /AuthSDKLibrary/vendor
+.DS_Store
