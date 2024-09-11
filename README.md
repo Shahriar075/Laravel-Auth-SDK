@@ -1,4 +1,5 @@
 
+
 # AuthSDKLibrary
 
 ## Project Title
@@ -109,7 +110,7 @@ The API will be accessible at `http://localhost:8000` or your specified base URL
 
 ### 1. Clone or Download the Library
 
-Clone or download the `Authentication-SDK` repository into your Laravel project. After cloning, make sure the `AuthSDKLibrary` folder is kept as is, since it contains the essential files for the library.
+Clone or download the Authentication-SDK repository into your Laravel project. After cloning, you can make changes to any files or folders as per your requirements within the repository, except for the core `AuthSDKLibrary` folder, as it contains the essential files and structure for the library. Ensure that the `AuthSDKLibrary` folder remains intact to maintain the functionality of the authentication services.
 
 `git clone https://github.com/Exabyting/Internal-reusable-SDKs.git`
 
@@ -238,7 +239,7 @@ Configure the base URL for your API endpoints in the `config/services.php` file:
     use AuthSDKLibrary\AuthManager;
     
     $data = [
-        'role_name' => 'General',
+        'name' => 'General',
     ];
     
     $response = AuthManager::addRoleForUser($data);
