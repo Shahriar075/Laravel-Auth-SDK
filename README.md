@@ -12,9 +12,9 @@ AuthSDKLibrary is a PHP library designed to simplify the integration of OAuth-ba
 ## Table of Contents
 
 1.  [Project Overview](#project-overview)
-2.  [About AuthSDKLibrary](#about-authsdklibrary)
-3.  [HLD AuthSDKLibrary](#hld-authsdklibrary)
-4.  [Features](#features)
+2.  [Features](#features)
+3.  [About AuthSDKLibrary](#about-authsdklibrary)
+4.  [HLD AuthSDKLibrary](#hld-authsdklibrary)
 5.  [Technologies Used](#technologies-used)
 6.  [Requirements](#requirements)
 7.  [Supporting API Setup](#supporting-api-setup)
