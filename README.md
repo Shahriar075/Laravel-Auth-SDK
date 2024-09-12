@@ -62,13 +62,11 @@ For a detailed overview of the system architecture and component interactions, r
 
 Begin by cloning the Internal Reusable SDK repository to set up the backend services required for the AuthSDKLibrary. After cloning, you can make changes to any files or folders within the `Authentication SDK Library` directory as needed. However, ensure that the core `AuthSDKLibrary` folder within the Authentication SDK Library remains intact, as it contains the essential files and structure for the library. The `Authentication SDK Supporting API` directory should not be altered, as it contains critical backend services that the AuthSDKLibrary relies on.
 
-`git clone https://github.com/Exabyting/Internal-reusable-SDKs.git` 
+`git clone https://github.com/Exabyting/Internal-reusable-SDKs.git`
 
-Navigate to the cloned directories inside the Internal reusable SDK's:
+Navigate to the cloned directory inside the Internal reusable SDK's:
 
-`cd Internal-reusable-SDKs` 
-
-`cd Authentication SDK Supporting API` 
+`cd Authentication SDK Supporting API`
 
 ### 2. Set Up the Supporting API
 
@@ -78,13 +76,13 @@ After cloning the repository, follow these steps to configure and run the suppor
 
 Use Composer to install the required PHP dependencies:
 
-`composer install` 
+`composer install`
 
 #### Configure Environment Variables
 
 Create a new `.env` file from the example provided:
 
-`cp .env.example .env` 
+`cp .env.example .env`
 
 Edit the `.env` file to include your specific configuration settings such as database credentials and API keys.
 
@@ -92,25 +90,27 @@ Edit the `.env` file to include your specific configuration settings such as dat
 
 Generate a unique application key for your API to ensure security:
 
-`php artisan key:generate` 
+`php artisan key:generate`
 
 #### Run Database Migrations
 
 Set up the database by running the migrations:
 
-`php artisan migrate` 
+`php artisan migrate`
 
 #### Start the API Server
 
 Launch the server to make the API operational:
 
-`php artisan serve` 
+`php artisan serve`
 
 The API will be accessible at `http://localhost:8000` or your specified base URL.
 
 ## Installation Instructions
 
 ### 1. Navigate to the Library
+
+Navigate to the cloned directory inside the Internal reusable SDK's:
 
 `cd Authentication SDK Library`
 
@@ -126,7 +126,7 @@ Add the following to your `composer.json` file under the `autoload` section:
 
 Then, run the following command to install Composer’s autoload files:
 
-`composer install` 
+`composer install`
 
 ### 3. Service Configuration
 
@@ -258,19 +258,19 @@ Configure the base URL for your API endpoints in the `config/services.php` file:
 ### Auth Endpoints
 
 -   **POST /register**
-    
+
     -   Registers a new user.
     -   **Request Body**: `name`, `email`, `password`, `role_id` (optional)
 -   **POST /login**
-    
+
     -   Logs in a user.
     -   **Request Body**: `email`, `password`
 -   **POST /auth/refresh**
-    
+
     -   Refreshes the user's access token.
     -   **Request Body**: `refresh_token`
 -   **POST /add-user-role**
-    
+
     -   Assigns a role to a user.
     -   **Request Body**: `role_name`
 
