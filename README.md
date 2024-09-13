@@ -60,13 +60,13 @@ For a detailed overview of the system architecture and component interactions, r
 
 ### 1. Clone the Supporting API Repository and SDK Library
 
-Begin by cloning the Internal Reusable SDK repository to set up the backend services required for the AuthSDKLibrary. After cloning, you can make changes to any files or folders within the `Authentication SDK Library` directory as needed. However, ensure that the core `AuthSDKLibrary` folder within the Authentication SDK Library remains intact, as it contains the essential files and structure for the library. The `Authentication SDK Supporting API` directory should not be altered, as it contains critical backend services that the AuthSDKLibrary relies on.
+Begin by cloning the Internal Reusable SDK repository to set up the backend services required for the AuthSDKLibrary. After cloning, ensure that the core `AuthSDKLibrary` folder within the `src` directory remains intact, as it contains the essential files and structure for the library.
 
 `git clone https://github.com/Exabyting/Internal-reusable-SDKs.git`
 
 Navigate to the cloned directory inside the Internal reusable SDK's:
 
-`cd Authentication SDK Supporting API`
+`cd Internal-reusable-SDKs/Authentication-SDK-Supporting-API`
 
 ### 2. Set Up the Supporting API
 
@@ -92,6 +92,12 @@ Generate a unique application key for your API to ensure security:
 
 `php artisan key:generate`
 
+#### Generate JWT Secret
+
+Generate a unique JWT secret key for your API to secure token-based authentication:
+
+`php artisan jwt:secret`
+
 #### Run Database Migrations
 
 Set up the database by running the migrations:
@@ -108,11 +114,11 @@ The API will be accessible at `http://localhost:8000` or your specified base URL
 
 ## Installation Instructions
 
-### 1. Navigate to the Library
+### 1. Navigate to the Directory
 
-Navigate to the cloned directory inside the Internal reusable SDK's:
+Navigate to the directory you are working on:
 
-`cd Authentication SDK Library`
+`cd your_working_directory`
 
 ### 2. Composer Autoload
 
@@ -120,13 +126,13 @@ Add the following to your `composer.json` file under the `autoload` section:
 
     "autoload": {
         "psr-4": {
-            "AuthSDKLibrary\\": "AuthSDKLibrary/src"
+            "AuthSDKLibrary\\": "Internal-reusable-SDKs/Authentication-SDK-Library/AuthSDKLibrary/src",
         }
     }
 
-Then, run the following command to install Composer’s autoload files:
+Then, run the following command to autoload Composer’s autoload files:
 
-`composer install`
+`composer dump-autoload`
 
 ### 3. Service Configuration
 
@@ -145,7 +151,7 @@ Add your OAuth providers' credentials in the `config/services.php` file of your 
 
 ## Configuration
 
-###  Environment Variables
+### 1. Environment Variables
 
 Set the necessary environment variables in your `.env` file for each OAuth provider:
 
@@ -272,7 +278,7 @@ Configure the base URL for your API endpoints in the `config/services.php` file:
 -   **POST /add-user-role**
 
     -   Assigns a role to a user.
-    -   **Request Body**: `role_name`
+    -   **Request Body**: `name`
 
 ## Testing the Library
 
@@ -305,20 +311,19 @@ You can test the library using the provided routes in your `routes/api.php` file
         return response()->json($data->getData());
     });
     
-    Route::middleware('web')->group(function () {
-        Route::get('auth/{provider}', function ($provider) {
-            $config = [
-                'client_id' => env('GITHUB_CLIENT_ID'),
-                'client_secret' => env('GITHUB_CLIENT_SECRET'),
-                'redirect_uri' => env('GITHUB_REDIRECT_URI'),
-            ];
+    Route::get('auth/{provider}', function ($provider) {
+         $config = [
+             'client_id' => env('GITHUB_CLIENT_ID'),
+             'client_secret' => env('GITHUB_CLIENT_SECRET'),
+             'redirect_uri' => env('GITHUB_REDIRECT_URI'),
+          ];
     
             $loginPageUrl = OAuthManager::redirectToProvider($provider, $config);
     
             return redirect($loginPageUrl);
         });
     
-        Route::get('auth/{provider}/callback', function ($provider) {
+    Route::get('auth/{provider}/callback', function ($provider) {
             $oAuthManager = new OAuthManager($provider);
             return $oAuthManager->handleProviderCallback();
         });
