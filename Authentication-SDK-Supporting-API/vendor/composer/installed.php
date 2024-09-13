@@ -3,7 +3,7 @@
         'name' => 'shahriaramin/auth-sdk-supporting-api',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'e304cbb697b35b8f17bddb000e978ade8fb3cd81',
+        'reference' => '04fc2f13d186753157bcabb2d6b1ec6de24243ca',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -1010,7 +1010,7 @@
         'shahriaramin/auth-sdk-supporting-api' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e304cbb697b35b8f17bddb000e978ade8fb3cd81',
+            'reference' => '04fc2f13d186753157bcabb2d6b1ec6de24243ca',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
