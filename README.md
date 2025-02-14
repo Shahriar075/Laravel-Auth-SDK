@@ -60,13 +60,13 @@ For a detailed overview of the system architecture and component interactions, r
 
 ### 1. Clone the Supporting API Repository and SDK Library
 
-Begin by cloning the Internal Reusable SDK repository to set up the backend services required for the AuthSDKLibrary. After cloning, ensure that the core `AuthSDKLibrary` folder within the `src` directory remains intact, as it contains the essential files and structure for the library.
+Begin by cloning the repository to set up the backend services required for the AuthSDKLibrary. After cloning, ensure that the core `AuthSDKLibrary` folder within the `src` directory remains intact, as it contains the essential files and structure for the library.
 
-`git clone https://github.com/Exabyting/Internal-reusable-SDKs.git`
+`git clone https://github.com/Shahriar075/Laravel-Auth-SDK.git`
 
-Navigate to the cloned directory inside the Internal reusable SDK's:
+Navigate to the cloned directory:
 
-`cd Internal-reusable-SDKs/Authentication-SDK-Supporting-API`
+`cd Authentication-SDK-Supporting-API`
 
 ### 2. Set Up the Supporting API
 
@@ -126,7 +126,7 @@ Add the following to your `composer.json` file under the `autoload` section:
 
     "autoload": {
         "psr-4": {
-            "AuthSDKLibrary\\": "Internal-reusable-SDKs/Authentication-SDK-Library/AuthSDKLibrary/src",
+            "AuthSDKLibrary\\": "Authentication-SDK-Library/AuthSDKLibrary/src",
         }
     }
 
