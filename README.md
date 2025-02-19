@@ -39,11 +39,11 @@ AuthSDKLibrary provides a robust solution for integrating both OAuth-based authe
 
 ## About AuthSDKLibrary
 
-For more detailed information, visit the [AuthSDK Library Documentation](https://docs.google.com/document/d/1sl_t9UiL0WJkBNqS5e_YjNhBcrF3dnzAcfKK17414Hs/edit#heading=h.zrk7gwsd7ac).
+For more detailed information, visit the [AuthSDK Library Documentation](https://docs.google.com/document/d/1nR3ajTLpRrh2412ss0Hj4_9JLyQAkLfQ3syyr-gTBM8).
 
 ## HLD AuthSDKLibrary
 
-For a detailed overview of the system architecture and component interactions, refer to the [HLD of AuthSDK Library](https://drive.google.com/file/d/16EH5CHUkcExh-qzN9RNfP_EkbQ2G_KQE/view?usp=sharing)
+For a detailed overview of the system architecture and component interactions, refer to the [HLD of AuthSDK Library](https://drive.google.com/file/d/138tyLHkCWbfoBAzBHE6xVIWGwYEFgI2v/view?usp=sharing)
 
 ## Technologies Used
 
